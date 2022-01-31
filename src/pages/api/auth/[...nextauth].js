@@ -10,6 +10,7 @@ export default NextAuth({
     }),
     // ...add more providers here
   ],
+  secret: process.env.SECRET,
   callbacks: {
     redirect: async (url, _baseUrl) => {
       return Promise.resolve('/');
